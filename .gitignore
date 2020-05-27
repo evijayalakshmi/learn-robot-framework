@@ -29,3 +29,8 @@ __pycache__
 .classpath
 .settings
 .jython_cache
+
+/Selenium-Screenshot-*
+geckodriver.log
+debug.log
+*.png
