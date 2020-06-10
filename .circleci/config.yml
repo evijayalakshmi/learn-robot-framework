@@ -13,12 +13,14 @@ workflows:
       build:
         executor:
           name: win/default
-          shell: powershell.exe
         steps:
-          - checkout
-          - run: systeminfo
+          # default shell is Powershell
+          - run:            
+             command: $(echo hello | Out-Host; $?) -and $(echo world | Out-Host; $?)
+             shell: powershell.exe
           - run:
-              name: "run tests"
-              shell: powershell.exe
-              command: |
-                run.bat
+             command: echo hello && echo world
+             shell: bash.exe
+          - run:
+             command: echo hello & echo world
+             shell: cmd.exe
