@@ -34,3 +34,6 @@ __pycache__
 geckodriver.log
 debug.log
 *.png
+
+pabot_results
+.pabotsuitenames
